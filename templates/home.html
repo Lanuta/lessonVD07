@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Добро пожаловать на сайт!</h1>
+    {% if 'user_id' in session %}
+        <p>Вы вошли в систему как <strong>{{ session['username'] }}</strong>.</p>
+    {% else %}
+        <p>Пожалуйста, зарегистрируйтесь или войдите в систему.</p>
+    {% endif %}
+{% endblock %}
